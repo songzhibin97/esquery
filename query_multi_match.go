@@ -18,7 +18,7 @@ func (q *MultiMatchQuery) Map() map[string]interface{} {
 
 type multiMatchParams struct {
 	Qry          interface{}    `structs:"query"`
-	Fields       []string       `structs:"fields"`
+	Fields       []string       `structs:"fields,omitempty"`
 	Type         MultiMatchType `structs:"type,string,omitempty"`
 	TieBrk       float32        `structs:"tie_breaker,omitempty"`
 	Boost        float32        `structs:"boost,omitempty"`
